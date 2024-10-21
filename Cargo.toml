@@ -10,7 +10,7 @@ cyw43 = { version = "0.2.0", features = ["defmt"] }
 cyw43-pio = { version = "0.2.0", features = ["defmt"] }
 defmt = "0.3.8"
 defmt-rtt = "0.4.1"
-embassy-executor = { version = "0.6.0", features = ["arch-cortex-m", "executor-thread", "defmt", "integrated-timers"] }
+embassy-executor = { version = "0.6.0", features = ["arch-cortex-m", "task-arena-size-98304", "executor-thread", "defmt", "integrated-timers"] }
 embassy-rp = { version = "0.2.0", features = ["defmt", "time-driver", "critical-section-impl"] }
 embassy-time = { version = "0.3.2", features = ["defmt"] }
 panic-probe = "0.3"
@@ -20,7 +20,7 @@ portable-atomic = { version = "1.5", features = ["critical-section"] }
 
 # deactivated features
 # cyw43: "firmware-logs"
-# embassy-executor: "task-arena-size-98304", "executor-interrupt"
+# embassy-executor: "executor-interrupt"
 # embassy-rp: "unstable-pac"
 # embassy-time: "defmt-timestamp-uptime"
 # panic-probe: "print-defmt"
