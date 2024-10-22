@@ -4,6 +4,12 @@ name = "rp-playground"
 version = "0.1.0"
 license = "MIT OR Apache-2.0"
 
+[[bin]]
+name = "rp-playground"
+path = "src/main.rs"
+test = false
+doctest = false
+bench = false
 
 [dependencies]
 cyw43 = { version = "0.2.0", features = ["defmt"] }
@@ -17,6 +23,7 @@ panic-probe = "0.3"
 static_cell = "2.1"
 cortex-m-rt = "0.7.0"
 portable-atomic = { version = "1.5", features = ["critical-section"] }
+embassy-net = { version = "0.4.0", features = ["defmt", "proto-ipv4", "proto-ipv6", "tcp", "udp", "dhcpv4", "medium-ethernet", "dns",] }
 
 # deactivated features
 # cyw43: "firmware-logs"
@@ -24,6 +31,7 @@ portable-atomic = { version = "1.5", features = ["critical-section"] }
 # embassy-rp: "unstable-pac"
 # embassy-time: "defmt-timestamp-uptime"
 # panic-probe: "print-defmt"
+# embassy-net: "multicast", "raw", 
 
 [profile.release]
 debug = 2

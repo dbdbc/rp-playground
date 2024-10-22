@@ -28,6 +28,7 @@
             pkgs.eza
             pkgs.fd
             pkgs.probe-rs-tools
+            pkgs.rust-analyzer
             rust-bin-tc
           ];
 
